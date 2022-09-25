@@ -1,0 +1,67 @@
+/* fira-sans-condensed-regular - cyrillic */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fira-sans-condensed-v10-cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/fira-sans-condensed-v10-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-regular.svg#FiraSansCondensed') format('svg'); /* Legacy iOS */
+}
+/* fira-sans-condensed-italic - cyrillic */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/fira-sans-condensed-v10-cyrillic-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/fira-sans-condensed-v10-cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-italic.svg#FiraSansCondensed') format('svg'); /* Legacy iOS */
+}
+/* fira-sans-condensed-500italic - cyrillic */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/fira-sans-condensed-v10-cyrillic-500italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/fira-sans-condensed-v10-cyrillic-500italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-500italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-500italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-500italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-sans-condensed-v10-cyrillic-500italic.svg#FiraSansCondensed') format('svg'); /* Legacy iOS */
+}
+p{
+    color:#7DBFC2;
+    font-size:20px;
+}
+
+.header{
+    background-color:#B9B0E7;
+    background-image: url("../src/wei.jpg");
+    margin:10px;
+    padding:50px;
+    padding-left:150px;
+    background-size:cover;
+
+}
+main{
+    background-color:#A9D0E8;
+    text-align:center;
+}
+
+footer{
+background-color:purple;
+}
+
+body{
+  font-family: 'Fira Sans Condensed';
+    font-style: italic;
+
+}
