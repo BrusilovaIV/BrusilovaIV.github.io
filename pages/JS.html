@@ -1,44 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../styles/style.css">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<header>
-    <div>
-        <img src="src/1.png" alt="logo" height="120px" width="130">
+<header class="header">
+    <div class="menu">
+        <div class = "header_logo">
+            <img src="../src/1.png" height="100" width="100">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="../index.html">О себе</a>
+                </li>
+                <li><a href="../index.html#comps">Что я умею</a></li>
+                <li>
+                    <a href="rezume.html">Резюме</a>
+                </li>
+                <li>
+                    <a href="portfolio.html">Мои работы</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+                <li>
+                    <a href="JS.html">JS</a>
+                </li>
+                <li>
+                    <a href="gallery_1.html">Галерея</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div>
+    <div class="wt">
         <h1>W-T</h1>
         <h2>Uni_Dubna</h2>
     </div>
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">О себе</a>
-            </li>
-            <li><a href="index.html#comps">Что я умею</a></li>
-            <li>
-                <a href="pages/rezume.html">Резюме</a>
-            </li>
-            <li>
-                <a href="pages/portfolio.html">Мои работы</a>
-            </li>
-            <li>
-                <a href="pages/contacts.html">Контакты</a>
-            </li>
-            <li>
-                <a href="pages/JS.html">JS</a>
-            </li>
-        </ul>
-    </nav>
-    <h1>
-
-    </h1>
-    <h2>
-
-    </h2>
 </header>
+<main>
+    <section  class="items1">
+        <div class="grid">
+            <form action="">
+                <div>
+                    <label for="name">Имя:</label>
+                    <input id="name" type="text" placeholder="введите имя">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email">
+                </div>
+                <div>
+                    <label for="tel">Номер телефона:</label>
+                    <input id="tel" type="tel">
+                </div>
+                <label for="theme">
+                    Укажите тему вопроса:
+                </label> <br>
+                <select name="list" id="theme">список
+                    <option value="work">работа</option>
+                    <option value="collab">сотрудничество</option>
+                    <option value="me">личное</option>
+                </select>
+                <fieldset class="radio">
+                        <legend>Как вам удобно получить ответ?</legend>
+                        <label>
+                            <input type="radio" name="conn" id="r_name">
+                            имя
+                        </label>
+                        <label>
+                            <input type="radio" name="conn" id="r_tel">
+                            по телефону
+                        </label>
+                        <label>
+                            <input type="radio" name="conn" id="r_email">
+                            по почте
+                        </label>
+                    </fieldset>
+                <fieldset class="checkbox">
+                    <label for="ch_1">
+                        <input type="checkbox" name="question" id="ch_1">
+                        вопрос
+                    </label>
+                    <label for="ch_2">
+                        <input type="checkbox" name="question" id="ch_2">
+                        еще вопрос
+                    </label>
+                    <label for="ch_3">
+                        <input type="checkbox" name="question" id="ch_3">
+                        еще вопрос
+                    </label>
+                </fieldset>
+                <textarea cols="20" rows="10">
+                </textarea>
+                <div>
+                    <input type="submit" value="отправить вопрос">
+    
+                </div>
+    
+            </form>
+        </div>
+        <div class = "item">
+            <h1>New task</h1>
+            <form class="form">
+                <input id = "item" type="text" required>
+            </form>
+            <h2>Task</h2>
+            <ul class="ul"></ul>
+            <button id="button">Clear</button>
+        </div>
+        <script>
+            const form = document.querySelector(".form");
+            const ul = document.querySelector(".ul");
+            const button = document.getElementById("button");
+            const input = document.getElementById("item");
+            const liMarker = (text)=>{
+                const li = document.createElement("li");
+                li.textContent = text;
+                ul.appendChild(li);
+            }
+            form.addEventListener("submit", function(e){
+                e.preventDefault();
+                liMarker(input.value);
+                input.value = " ";
+            });
+        </script>    
+        </section>
+</main>
+<footer>
+    <div>Made by Shisha</div>
+    <div>
+        &#9884
+        &#10084
+    </div>
+</footer>
 </body>
+
 </html>

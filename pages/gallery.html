@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/style.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class = "container">
+  <div class="slider">
+      <div class="sliderLine">
+          <img src = "../src/01.png" class="pictureSlide">
+          <img src = "../src/02.png" class="pictureSlide">
+          <img src = "../src/03.png" class="pictureSlide">
+          <img src = "../src/05.png" class="pictureSlide">
+          <img src = "../src/05.png" class="pictureSlide">
+          <img src = "../src/06.png" class="pictureSlide">
+      </div>
+  </div>
+</div>
+<script>
+    let offset = 0;
+    const sliderline = document.querySelector('.sliderLine');
+    document.querySelector('.sliderNext').addEventListener('click', function(){
+    offset = offset + 256;
+    if (offset > 1280){
+    offset = 0;
+    }
+    slider.style.left = -offset + 'px';
+    }
+    )
+    document.querySelector('.sliderPrev').addEventListener('click', function(){
+    offset = offset - 256;
+    if (offset <= 1280){
+    offset = 1280;
+    }
+    slider.style.left = -offset + 'px';
+    }
+    )
+    
+    
+</script>
+<button class="sliderPrev">
+    Previous
+</button>
+<button class="sliderNext">
+    Next
+</button>
+<div class="block">
+
+</div>
+<script>
+    var
+    arr = ['01.png','02.png','03.png','04.png','05.png','06.png',]
+    let block = document.querySelector('.block');
+    function change(){
+    block.style.backgroundImage = 'url(../src/' + arr[i] + ')';
+    i++
+    if(i == arr.length){
+    i = 0;
+    }
+    }
+</script>
+</body>
+</html>

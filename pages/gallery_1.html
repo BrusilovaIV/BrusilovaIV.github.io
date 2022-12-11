@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu">
+            <div class = "header_logo">
+                <img src="../src/1.png" height="100" width="100">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="../index.html">О себе</a>
+                    </li>
+                    <li><a href="../index.html#comps">Что я умею</a></li>
+                    <li>
+                        <a href="rezume.html">Резюме</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">Мои работы</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="JS.html">JS</a>
+                    </li>
+                    <li>
+                        <a href="../pages/gallery_1.html">Галерея</a>
+                    </li>
+    
+                </ul>
+            </nav>
+        </div>
+        <div class="wt">
+            <h1>W-T</h1>
+            <h2>Uni_Dubna</h2>
+        </div>
+    </header>
+        <main>
+        <!--галерея 1 слайдер-->
+        <section>
+            <span>Cлайдер</span>
+            <div class="container">
+                <div class="slider">
+                    <div class="slider-line">
+                        <img src="../src/01.png"  class="mini" alt="">
+                        <img src="../src/02.png"  class="mini" alt="">
+                        <img src="../src/03.png"  class="mini" alt="">
+                        <img src="../src/04.png"  class="mini" alt="">
+                        <img src="../src/05.png"  class="mini" alt="">
+                        <img src="../src/06.png"  class="mini" alt="">
+                    </div>
+                </div>
+                <button class="slider-prev">Назад</button>
+                <button class="slider-next">Вперед</button>
+            </div>
+
+            <script>
+            let offset = 0;
+            const sliderLine = document.querySelector('.slider-line');
+            document.querySelector('.slider-next').addEventListener('click', function(){
+                offset = offset + 256;
+                if (offset > 1280) {
+                    offset = 0;
+                }
+                sliderLine.style.left = -offset + 'px';
+            });
+            
+            document.querySelector('.slider-prev').addEventListener('click', function () {
+                offset = offset - 256;
+                if (offset < 0) {
+                    offset = 1280;
+                }
+                sliderLine.style.left = -offset + 'px';
+            });
+                </script>
+        </section>
+
+        <!--галерея 2 по щелчку выбор миниатюры-->
+        <section>
+            <span>Выбор миниатюры</span>
+            <div class="container1">
+                <div id="big">
+                    <img src="../src/1." alt="" width="770" id="bigp" class="bigp">
+                </div>
+                <div>
+                    <img src="../src/02.png"  alt="" width="250" class="smallp" >
+                    <img src="../src/03.png"  alt="" width="250" class="smallp" >
+                    <img src="../src/04.png"  alt="" width="250" class="smallp" >
+                    <img src="../src/05.png"  alt="" width="250" class="smallp" >
+                    <img src="../src/06.png"  alt="" width="250" class="smallp" >
+                    <img src="../src/07.png"  alt="" width="250" class="smallp" >
+                </div>
+                <script>
+                    let el = document.getElementsByClassName("smallp");
+                    console.log(el)
+                    for (i = 0; i < el.length; ++i) {
+                        el[i].onclick = pic
+                    }
+                    // el.forEach(element => {
+                    //   element.onclick = pic;
+                    // });
+                
+                function pic(event) {
+                  x=document.getElementById("bigp");
+                  console.log(event.target);
+                //   x.src='img/3.jpg';
+                x.src = event.target.src;
+              }
+                </script>
+                </div>
+        </section>
+                        
+    </main>
+    <footer class="footer">
+        <div>Made by Shisha</div>
+        <div>
+            &#9884
+            &#10084
+        </div>
+    </footer>
+    </body>
+</html>

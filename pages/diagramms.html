@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/style.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header class="header">
+    <div class="menu">
+        <div class="header_logo">
+            <img src="../src/1.png" height="100" width="100">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="../index.html">О себе</a>
+                </li>
+                <li><a href="../index.html#comps">Что я умею</a></li>
+                <li>
+                    <a href="rezume.html">Резюме</a>
+                </li>
+                <li>
+                    <a href="portfolio.html">Мои работы</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+                <li>
+                    <a href="JS.html">JS</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="wt">
+        <h1>W-T</h1>
+        <h2>Uni_Dubna</h2>
+    </div>
+</header>
+<main>
+    <canvas width="500px" height="500px" id="canvas"></canvas>
+    <canvas width="500px" height="500px" id="canvas1"></canvas>
+
+    <script>
+            const data = [16, 5, 78, 10, 13];
+            const canvas = document.getElementById('canvas');
+            let c = canvas.getContext('2d');
+            c.fillStyle = 'pink';
+            c.fillRect(0, 0, 500, 600);
+            c.fillStyle = 'green';
+            for (let i = 0; i < data.length; i++) {
+                let dp = data[i];
+                c.fillRect(25 + i*100, 500-dp*5 - 25, 50, dp*5);
+            }
+            c.fillStyle = "black";
+            c.lineWidth = 2.0;
+            c.beginPath();
+            c.moveTo(25,10);
+            c.lineTo(25,475);
+            c.lineTo(490,475);
+            c.stroke();
+            c.fillStyle = "black";
+            for (i = 0; i < 6; i++) {
+                c.fillText((5-i)*20 + " ", 4,i*80 + 75);
+                c.beginPath();
+                c.moveTo(25, i*80 + 75);
+                c.lineTo(25, i*80 + 75);
+                c.stroke();
+
+            }
+            const label = ["янв", "февр", "март", "апрель", "май"]
+            for (i = 0; i < label.length; i++) {
+                c.fillText(label[i], 50+ i*100, 495);
+            }
+
+    </script>
+    <script>
+            const data1 = [10, 50, 78, 10, 13];
+            const canvas1 = document.getElementById('canvas1');
+            let d = canvas1.getContext('2d');
+            d.fillStyle = 'red';
+            d.fillRect = (0,0,500,500);
+            const colors = ["red","blue","yellow"];
+            let total = 0;
+            for(let i = 0; i < data1.length, i ++){
+            total += data1[i];
+            }
+            let provAngel = 0;
+            for(let i = 0; i < data1.length, i ++){
+                let fraction = data1[i]/total;
+                const angle = provAngle + fraction*Math.PI*2;
+                d.beginPath();
+                d.moveTo(250,250);
+                d.arc(250,250,100, provAngel, angle, false);
+                d.lineTo(250,250);
+                d.fillStyle = colors[i];
+                d.fill();
+                d.strokeStyle = 'blue';
+                d.stroke();
+                provAngel = angle;
+            }
+    </script>
+</main>
+<footer>
+    <div>Made by Shisha</div>
+    <div>
+        &#9884
+        &#10084
+    </div>
+</footer>
+</body>
+</html>

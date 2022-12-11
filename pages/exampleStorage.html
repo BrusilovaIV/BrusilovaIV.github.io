@@ -8,7 +8,7 @@
 <body>
 <header class="header">
     <div class="menu">
-        <div class = "header_logo">
+        <div class="header_logo">
             <img src="../src/1.png" height="100" width="100">
         </div>
         <nav class="nav">
@@ -24,15 +24,11 @@
                     <a href="portfolio.html">Мои работы</a>
                 </li>
                 <li>
-                    <a href="../pages/contacts.html">Контакты</a>
+                    <a href="contacts.html">Контакты</a>
                 </li>
                 <li>
                     <a href="JS.html">JS</a>
                 </li>
-                <li>
-                    <a href="gallery_1.html">Галерея</a>
-                </li>
-
             </ul>
         </nav>
     </div>
@@ -42,7 +38,22 @@
     </div>
 </header>
 <main>
+    <script>
+        localStorage.setItem("data", 3);
+        console.log(localStorage.getItem('data'));
 
+        localStorage['dataS'] = 'item1';
+        delete localStorage['dataS']
+
+        const a = [4, 5, 6, 7, 8, 9];
+        localStorage.setItem('a', JSON.stringify(a));
+
+        let b = JSON.parse(localStorage.getItem('a'));
+        console.log(b);
+        console.log(b[3]);
+        
+
+    </script>
 </main>
 <footer>
     <div>Made by Shisha</div>
